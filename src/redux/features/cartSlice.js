@@ -65,10 +65,12 @@ const cartSlice = createSlice({
     },
     removeItem: (state, action) => {
       const { product, quantity } = action.payload;
-      console.log(quantity);
+
+      console.log(quantity,product);
       const removeItem = state.items.filter(
-        (item) => item.id !== action.payload.id
+        (item) => item.product.id != product.id
       );
+      console.log(removeItem);
       state.items = removeItem;
       state.totalQuantity -= quantity;
       state.subTotal -= product.price * quantity;
