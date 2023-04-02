@@ -1,22 +1,11 @@
 import React, { useEffect } from "react";
 import Product from "./Product";
-import { useDispatch, useSelector } from "react-redux";
-import { fetch_products } from "../redux/features/productSlice";
+import { useSelector } from "react-redux";
 
 export default function ProductLists() {
-
   const { isLoading, iserror, error, filteredProducts } = useSelector(
     (state) => state.products
   );
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    function fetchProducts() {
-      dispatch(fetch_products());
-    }
-    fetchProducts();
-  }, []);
 
   return (
     <>
@@ -33,7 +22,6 @@ export default function ProductLists() {
           </div>
         </div>
       </section>
-     
     </>
   );
 }
