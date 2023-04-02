@@ -1,4 +1,4 @@
-import React, { lazy, useState } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import Productpage from "../components/Productpage";
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";

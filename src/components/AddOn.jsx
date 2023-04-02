@@ -178,7 +178,7 @@ export default function AddOn({ product, closeModel, setCloseModel }) {
                     fill="black"
                     stroke="black"
                     onClick={() => {
-                      quantity > 0 && setQuantity(quantity - 1);
+                      quantity > 1 && setQuantity(quantity - 1);
                     }}
                   />
                 </button>
