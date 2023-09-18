@@ -13,7 +13,7 @@ export const fetch_products = createAsyncThunk(
   "product/fetch_products",
   async () => {
     const response = await axios.get(
-      "https://run.mocky.io/v3/ec196a02-aaf4-4c91-8f54-21e72f241b68"
+      "https://6507ea2456db83a34d9b7024.mockapi.io/pizza"
     );
     return response.data;
   }
